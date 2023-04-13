@@ -1,46 +1,66 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Steve Rector</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
-</head>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <meta name="robots" content="noindex"/>
+        <title>Steve Rector</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+        <script src='main.js'></script>
+    </head>
 <body>
-    <h1>Steve Rector</h1>
-    <h2>Web Dev Concepts</h2>
-    <!--Explain what index means as it relates to websites and servers-->
-    <p>
-        The index is called the designated homepage on Apache web servers, and the index.html file
-        in the root directory is called the homepage of the web application. Most web applications
-        are configured to return the index file whenever a GET request is received with only a "/". 
-    </p> 
-    <!--Explain what you see in the browser's Web Dev/Inspector tools. What is different about the file's details on the web server
-    vs the local computer?-->
-    <p>
-        I navigated to the Network tab to view this information by opening each version (web and local) in Google Chrome, pressing CTRL + SHIFT + I (the shortcut
-        for Windows to open the  web console), and then pressing CTRL + R to refresh the data in the Network tab. At that point, I was able to click into the
-        loaded files and see the related information (Status code, Request Method, Response-Headers, Request-Headers, etc.).
-        The first difference I noticed between the web server and local computer was that in the web server's network tab, the file is referred to as
-        a1-rectors/, vs on the local computer it is referred to as index.html. The next difference noticed was the web server's request URL's protocol 
-        is HTTPS, vs the local computer protocol being file. The web server tab also has a lot more Response Headers (including Connection, Content Encoding, etc.)
-        and Request Headers (including Accept-Encoding, Cookie, etc.) than the local computer tab. As a last note, both the server and computer had 200 
-        status codes.
-    </p>
-    <!--Explain why the favicon.ico file has a status 200 but the main.css and main.js files do not-->
-    <p>
-        The favicon.ico file returns a 200 status because the resource was successfully found and retrieved in the web.engr.oregonstate.edu server.
-        The main.css and main.js files instead return a 404 Not Found status, because those resources were not found in the aforementioned
-        server.
-    </p>
-    <!--Explain the parts of the URL to your web file. What are the scheme, subdomain, host domain, and resources?-->
-    <p>
-        The scheme (protocol) of my web file is HTTPS, signifying the data transferred is encrypted. The subdomains of my web file are web and engr
-        (web.engr.) and the host domain is oregonstate.edu. The resource specified for my web file is a1-rectors/, which as expected defaults to
-        retrieve the index.html file from the a1-rectors location in the web server.
-    </p>
-        
+    <header>
+        <h1>Steve Rector</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Web Dev Concepts</h2>
+            <article>
+                <h3>Web Servers</h3>
+                <!--Explain what index means as it relates to websites and servers-->
+                <p>
+                    The index is called the designated homepage on Apache web servers, and the index.html file
+                    in the root directory is called the homepage of the web application. Most web applications
+                    are configured to return the index file whenever a GET request is received with only a "/". 
+                </p> 
+                <!--Explain what you see in the browser's Web Dev/Inspector tools. What is different about the file's details on the web server
+                vs the local computer?-->
+                <p>
+                    I navigated to the Network tab to view this information by opening each version (web and local) in Google Chrome, pressing CTRL + SHIFT + I (the shortcut
+                    for Windows to open the  web console), and then pressing CTRL + R to refresh the data in the Network tab. At that point, I was able to click into the
+                    loaded files and see the related information (Status code, Request Method, Response-Headers, Request-Headers, etc.).
+                    The first difference I noticed between the web server and local computer was that in the web server's network tab, the file is referred to as
+                    a1-rectors/, vs on the local computer it is referred to as index.html. The next difference noticed was the web server's request URL's protocol 
+                    is HTTPS, vs the local computer protocol being file. The web server tab also has a lot more Response Headers (including Connection, Content Encoding, etc.)
+                    and Request Headers (including Accept-Encoding, Cookie, etc.) than the local computer tab. As a last note, both the server and computer had 200 
+                    status codes.
+                </p>
+                <!--Explain why the favicon.ico file has a status 200 but the main.css and main.js files do not-->
+                <p>
+                    The favicon.ico file returns a 200 status because the resource was successfully found and retrieved in the web.engr.oregonstate.edu server.
+                    The main.css and main.js files instead return a 404 Not Found status, because those resources were not found in the aforementioned
+                    server.
+                </p>
+                <!--Explain the parts of the URL to your web file. What are the scheme, subdomain, host domain, and resources?-->
+                <p>
+                    The scheme (protocol) of my web file is HTTPS, signifying the data transferred is encrypted. The subdomains of my web file are web and engr
+                    (web.engr.) and the host domain is oregonstate.edu. The resource specified for my web file is a1-rectors/, which as expected defaults to
+                    retrieve the index.html file from the a1-rectors location in the web server.
+                </p>
+            </article>
+            <article>
+                <h3>Frontend Design</h3>
+                    <p>
+                    <!--Explain the concept of frontend design-->
+                    The core concept of frontend design is about creating the optimal experience for users. This concept includes components such as the visual
+                    design of the page, the GUI (graphical user-interface) and the overall interactive experience that the user has. With regard to the specifics 
+                    pertaining to visual design, it requires things like a consistent color scheme, font, illustration scheme, etc., as well as navigation 
+                    systems that make logical sense for the user. Frontend design trends tend to change frequently, so it is important for frontend developers
+                    to stay on top of the newest trends as they surface.
+                    </p>
+            </article>
+        </section>
+    </main>
 </body>
 </html>
