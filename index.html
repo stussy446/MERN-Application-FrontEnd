@@ -20,21 +20,21 @@
                 <h3>Web Servers</h3>
                 <!--Explain what index means as it relates to websites and servers-->
                 <p>
-                    The index is called the designated homepage on Apache web servers, and the index.html file
+                    The <strong>index</strong> is called the designated homepage on Apache web servers, and the index.html file
                     in the root directory is called the homepage of the web application. Most web applications
                     are configured to return the index file whenever a GET request is received with only a "/". 
                 </p> 
                 <!--Explain what you see in the browser's Web Dev/Inspector tools. What is different about the file's details on the web server
                 vs the local computer?-->
                 <p>
-                    I navigated to the Network tab to view this information by opening each version (web and local) in Google Chrome, pressing CTRL + SHIFT + I (the shortcut
+                    I navigated to the <strong>Network tab</strong> to view this information by opening each version (web and local) in Google Chrome, pressing CTRL + SHIFT + I (the shortcut
                     for Windows to open the  web console), and then pressing CTRL + R to refresh the data in the Network tab. At that point, I was able to click into the
                     loaded files and see the related information (Status code, Request Method, Response-Headers, Request-Headers, etc.).
                     The first difference I noticed between the web server and local computer was that in the web server's network tab, the file is referred to as
-                    a1-rectors/, vs on the local computer it is referred to as index.html. The next difference noticed was the web server's request URL's protocol 
-                    is HTTPS, vs the local computer protocol being file. The web server tab also has a lot more Response Headers (including Connection, Content Encoding, etc.)
-                    and Request Headers (including Accept-Encoding, Cookie, etc.) than the local computer tab. As a last note, both the server and computer had 200 
-                    status codes.
+                    a1-rectors/, vs on the local computer it is referred to as index.html. The next difference noticed was the web server's request URL's <strong>protocol</strong>
+                    is HTTPS, vs the local computer protocol being file. The web server tab also has a lot more <strong>Response Headers</strong> (including Connection, Content Encoding, etc.)
+                    and <strong>Request Headers</strong> (including Accept-Encoding, Cookie, etc.) than the local computer tab. As a last note, both the server and computer had 200 
+                    <strong>status codes</strong>.
                 </p>
                 <!--Explain why the favicon.ico file has a status 200 but the main.css and main.js files do not-->
                 <p>
@@ -44,42 +44,41 @@
                 </p>
                 <!--Explain the parts of the URL to your web file. What are the scheme, subdomain, host domain, and resources?-->
                 <p>
-                    The scheme (protocol) of my web file is HTTPS, signifying the data transferred is encrypted. The subdomains of my web file are web and engr
-                    (web.engr.) and the host domain is oregonstate.edu. The resource specified for my web file is a1-rectors/, which as expected defaults to
-                    retrieve the index.html file from the a1-rectors location in the web server.
+                    The <strong>scheme (protocol)</strong> of my web file is <strong>HTTPS</strong>, signifying the data transferred is encrypted. The <strong>subdomains</strong>
+                    of my web file are web and engr (web.engr.) and the <strong>host domain</strong> is oregonstate.edu. The <strong>resource</strong> specified for my web file 
+                    is a1-rectors/, which as expected  defaults to retrieve the index.html file from the a1-rectors location in the web server.
                 </p>
             </article>
             <article>
                 <h3>Frontend Design</h3>
                     <p>
                         <!--Explain the concept of frontend design-->
-                        The core concept of frontend design is about creating the optimal experience for users. This concept includes components such as the visual
-                        design of the page, the GUI (graphical user-interface) and the overall interactive experience that the user has. With regard to the specifics 
+                        The core concept of <strong>frontend design</strong> is about creating the optimal experience for users. This concept includes components such as the visual
+                        design of the page, the <strong>GUI (graphical user-interface)</strong> and the overall interactive experience that the user has. With regard to the specifics 
                         pertaining to visual design, it requires things like a consistent color scheme, font, illustration scheme, etc., as well as navigation 
                         systems that make logical sense for the user. Frontend design trends tend to change frequently, so it is important for frontend developers
                         to stay on top of the newest trends as they surface.
                     </p>
                     <!--Create a definition list explaining the five "E"s of usability-->
-                    <h4>The Five "E"s of Usability</h4>
                     <dl>
-                        <dt>Effective</dt>
+                        <dt><strong>Effective</strong></dt>
                         <dd>Helps users meet their goals with accurate results.</dd>
-                        <dt>Efficient</dt>
+                        <dt><strong>Effecient</strong></dt>
                         <dd>Users can perform tasks with the minimal number of steps and get results quickly.</dd>
-                        <dt>Easy to navigate</dt>
+                        <dt><strong>Easy to navigate</strong></dt>
                         <dd>Users immediately know how to locate their goal by clicking/searching, and remember how to do it again the next time
                             they visit the page. This is especially important for users that have never used the page before.
                         </dd>
-                        <dt>Error-free</dt>
+                        <dt><strong>Error-free</strong></dt>
                         <dd>Users do not run into roadblocks for their specific needs. This avoids accessibility and availability issues.</dd>
-                        <dt>Enjoyable to use (engaging)</dt>
+                        <dt><strong>Enjoyble to use(engaging)</strong></dt>
                         <dd>The needs of the intended audience are met in content and design, and they are planning to come back to the page thanks
                             to the overall positive experience.
                         </dd>
                     </dl>
                     <!--Explain the purpose of page layout tags-->
                     <p>
-                        The main purpose of page layout tags (such as header, nav, main, etc.) is to section off and structure the flow of content on a web 
+                        The main purpose of <strong>page layout tags</strong> (such as header, nav, main, etc.) is to section off and structure the flow of content on a web 
                         page. Page layout tags are very focused on organization rather than styling. For example, most page layout tags are displayed 
                         by browsers with a newline before and after the element, but beyond that it is up to the developer to use CSS to further style them.
                         Page layout blocks also help machines (including search engine robots, screen readers, etc.) to accurately understand which area of 
@@ -87,17 +86,20 @@
                     </p>
                     <!--Explain how anchors link content from page to page, and differentiate between text anchors and navigation-->
                     <p>
-                        Anchors link content by describing the content between the opening and closing anchor tags (this description is the link), and 
-                        specifying the URL that the link will take the user to in a href attribute within the opening anchor tag. Anchors can be used to
+                        <strong>Anchors</strong> link content by describing the content between the opening and closing anchor tags (the description itself is the link), and 
+                        specifying the URL that the link will take the user to in a <strong>href</strong> attribute within the opening anchor tag. Anchors can be used to
                         link from one page to another, and they can also be used to link to a specific location within the document it is a part of. This is
-                        done by adding an id attribute to the element the developer wants to link to, and then adding the value of the id attribute at the end 
-                        of the URL specified in the anchor's href (example.html#examplelocation). The conceptual difference between text anchors and 
-                        navigational anchors is that anchor tags typically link to sections within the same file, while navigational anchors specifically link 
-                        externally to other files. Navigational anchors are also children of the nav tag and are typically displayed as buttons, whereas 
+                        done by adding an <strong>id</strong> attribute to the element the developer wants to link to, and then adding the value of the id attribute at the end 
+                        of the URL specified in the anchor's href (example.html#examplelocation). The conceptual difference between <strong>text anchors</strong> and 
+                        <strong>navigational anchors</strong> is that anchor tags typically link to sections within the same file, while navigational anchors specifically link 
+                        externally to other files. Navigational anchors are also children of the <strong>nav</strong> tag and are typically displayed as buttons, whereas 
                         non-navigational anchors are typically displayed as text links.
                     </p>
             </article>
         </section>
     </main>
+    <footer>
+        <p>&copy; 2023 Steve Rector</p>
+    </footer>
 </body>
 </html>
