@@ -35,12 +35,16 @@
   
   /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
   body {       /* Can alternatively define in html {} or :root {} */
-    /*background-color:;
-    background-image:;
+    background-image: url(images/sky-background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top left;
+    background-repeat: no-repeat;
+    font-family: 'Fira Sans', sans-serif;
+  /*background-color:;
     color:;
     margin:;
     padding:; */
-    font-family: 'Fira Sans', sans-serif;
   }
   
   /*  ----- Page layout blocks -----  */
