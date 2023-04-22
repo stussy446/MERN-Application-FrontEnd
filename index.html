@@ -21,7 +21,13 @@
     <main>
         <section>
             <h2>Web Dev Concepts</h2>
-            <article>
+            <nav class="homenav">
+                <a href="#web-servers">Web Servers</a>
+                <a href="#frontend-design">Frontend Design</a>
+                <a href="#optimizing-images">Optimizing Images</a>
+                <a href="#cascading-stylesheets">Cascading Stylesheets</a>
+            </nav>
+            <article id="web-servers">
                 <h3>Web Servers</h3>
                 <!--Explain what index means as it relates to websites and servers-->
                 <p>
@@ -54,7 +60,7 @@
                     is a1-rectors/, which as expected  defaults to retrieve the index.html file from the a1-rectors location in the web server.
                 </p>
             </article>
-            <article>
+            <article id="frontend-design">
                 <h3>Frontend Design</h3>
                     <p>
                         <!--Explain the concept of frontend design-->
@@ -101,47 +107,47 @@
                         non-navigational anchors are typically displayed as text links.
                     </p>
             </article>
-            <article>
+            <article id="optimizing-images">
                 <h3>Optimizing Images</h3>
                     <p>
                         <!--What are the 6 major specifiations of images for the web and why?-->
-                        The first image specification is having a descriptive file name, which improves search engine optimization. A descriptive but concise file name will help 
-                        search engine bots correctly categorize the image for users who may be searching for related images. The second specification is having a small file size,
+                        The first image specification is having a <strong>descriptive file name</strong>, which improves search engine optimization. A descriptive but concise file name will help 
+                        search engine bots correctly categorize the image for users who may be searching for related images. The second specification is having a <strong>small file size</strong>,
                         which helps in achieving faster load times. Lossy compression will reduce the file size the most, but will result in pixelation, while lossless compression
-                        does not cause pixelation but also does not compress the image has much as lossy compression. The third specification is having exact dimensions, for 
+                        does not cause pixelation but also does not compress the image has much as lossy compression. The third specification is having <strong>exact dimensions</strong>, for 
                         example cropping and reducing image sizes to fit the dimensions of your web page. Like smaller file sizes, this also helps reduce load times. The fourth 
-                        specification is having the correct file format (.JPG for online photos, .GIF or 9-bit PNG for line-art, etc.) which will ensure the image displays as intended.
-                        The fifth specification is reduced resolution, which involves providing multiple image sizes so the image can display well regardless of the monitor's ppi. The 
-                        sixth (and final) specification is having the correct color mode (RGB for .PNG, .JPG, etc. and Indexed for.GIF) which help optimize images and ensure they appear
+                        specification is having the <strong>correct file format</strong> (.JPG for online photos, .GIF or 9-bit PNG for line-art, etc.) which will ensure the image displays as intended.
+                        The fifth specification is <strong>reduced resolution</strong>, which involves providing multiple image sizes so the image can display well regardless of the monitor's ppi. The 
+                        sixth (and final) specification is having the correct <strong>color mode</strong> (RGB for .PNG, .JPG, etc. and Indexed for.GIF) which help optimize images and ensure they appear
                         consistently across different types of media.
                     </p>
                     <p>
                         <!--Which file formats are most appropriate for photos and for line art, and why?-->
-                        The .JPG and .WebP file formats are most appropriate for photos because they are able to compress down to smaller file sizes while remaining rectangular. These 
-                        formats are designed to store high-quality digital photos efficiently, making them easier to share on the web. The .GIF and 8-bit .PNG file formats are most 
+                        The <strong>.JPG and .WebP</strong> file formats are most appropriate for photos because they are able to compress down to smaller file sizes while remaining rectangular. These 
+                        formats are designed to store high-quality digital photos efficiently, making them easier to share on the web. The <strong>.GIF and 8-bit .PNG</strong> file formats are most 
                         appropriate for line art. For the .GIF format, this is because line art can take advantage of the format's lossless compression in order to preserve uniform color
                         with well-defined edges. For the 8-bit .PNG format, this is because they can be place over any variety of file without distortion, and will have a smaller file size.
                         The reasoning for this is because 8-bit can store 256 possible colors, vs something like a 24-bit image being able to store over 16 million colors 
                         (which increases the size).
                     </p>
             </article>
-            <article>
+            <article id="cascading-stylesheets">
                 <h3>Cascading Stylesheets</h3>
                     <p>
                         <!--What are the main reasons to icorporate stylesheets in websites and apps?-->
-                        The key reason to incorporate stylesheets into websites and apps is that using a style sheet allows the developer to redefine how the structure, content, and components 
+                        The key reason to incorporate <strong>stylesheets</strong> into websites and apps is that using a style sheet allows the developer to redefine how the structure, content, and components 
                         in the page should look and behave. This flexibility that stylesheets provides is important because it empowers the developer to improve important aspects of the page, 
                         including readability, legibility, adhering to specific brand requirements, and more. 
                     </p>
                     <p>
                         <!--What are the 5 ways to incorporate styles, and why?-->
-                        The first (and most common) way to incorporate styles is through one or more external files that contain CSS rules (main.css for example in this assignment). This method 
+                        The first (and most common) way to incorporate styles is through one or more <strong>external files</strong> that contain CSS rules (main.css for example in this assignment). This method 
                         is powerful because a developer can link to these stylesheets in the head of the website and provide styles to all pages of the website that link to the stylesheet. It is 
                         also possible to link multiple stylesheets for modularity as needed, and other stylesheets can be imported in as well. Externally linked stylesheets are usually the most 
-                        efficient and preferred method for handling styling. The second way is by embedding styling within a &lt;style&gt; tag, which allows the developer to implement some styling 
-                        directly within a block of the HTML file. The third way is by styling inline within an element using attributes and values, which allows the developer to 
-                        add styling rules within elements of the HTML file that already exist (for example, styling a h1 tag from within the tag). The fourth way is through JavaScript template 
-                        literals, which allow for multi-line strings and string interpolation as needed. The fifth (and final) way is through manipulation of the Document Object Model with regular 
+                        efficient and preferred method for handling styling. The second way is by <strong>embedding styling</strong> within a &lt;style&gt; tag, which allows the developer to implement some styling 
+                        directly within a block of the HTML file. The third way is by <strong>styling inline</strong> within an element using attributes and values, which allows the developer to 
+                        add styling rules within elements of the HTML file that already exist (for example, styling a h1 tag from within the tag). The fourth way is through <strong>JavaScript template 
+                        literals</strong>, which allow for multi-line strings and string interpolation as needed. The fifth (and final) way is through <strong>manipulation of the Document Object Model</strong> with regular 
                         JavaScript. This allows for dynamic styling based on whatever logic is provided in the JavaScript code (for example, potentially turning a specific element a different color
                         depending on if the user left-clicks or right-clicks on the element).
                     </p>
