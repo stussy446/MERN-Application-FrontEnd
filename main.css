@@ -22,7 +22,8 @@
     --very-soft-blue:hsl(207, 46%, 80%);
     --soft-magenta: hsla(304, 69%, 64%, 0.8);
     --bright-orange: hsl(35, 83%, 60%);
-    --light-pink: hsl(350, 98%, 90%)
+    --light-pink: hsl(350, 98%, 90%);
+    --light-salmon: hsl(6, 92%, 70%);
   }
   
   /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
@@ -64,7 +65,6 @@
     background-color: var(--slightly-desaturated-blue);
     padding: 1px;
     border: 10px solid;
-    font-weight: 800;
   }
   
   /* ----- Anchors ----- Text links */
@@ -82,7 +82,7 @@
 
   nav a {
     background-color: var(--soft-magenta);
-    border: 2px solid salmon;
+    border: 2px solid var(--light-salmon);
     border-radius: 5px 0;
     color: var(--light-pink);
     font-size: 1.25em;
@@ -105,7 +105,7 @@
   dt {}
   dd {}
   
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, footer {
     font-family: 'Bebas Neue', cursive;
   } 
 
