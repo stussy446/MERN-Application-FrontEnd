@@ -65,6 +65,8 @@
     background-color: var(--slightly-desaturated-blue);
     padding: 1px;
     border: 10px solid;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.1em;
   }
   
   /* ----- Anchors ----- Text links */
@@ -105,8 +107,9 @@
   dt {}
   dd {}
   
-  h1, h2, h3, h4, h5, h6, footer {
+  h1, h2, h3, h4, h5, h6 {
     font-family: 'Bebas Neue', cursive;
+    font-size: 1.5em;;
   } 
 
   h1 {}
