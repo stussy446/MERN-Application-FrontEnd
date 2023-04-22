@@ -20,8 +20,9 @@
     --moderate-blue:hsl(213, 45%, 54%);
     --slightly-desaturated-blue:hsl(210, 43%, 69%);
     --very-soft-blue:hsl(207, 46%, 80%);
-    --soft-magenta: hsla(304, 83%, 35%, 80%);
+    --soft-magenta: hsla(304, 69%, 64%, 0.8);
     --bright-orange: hsl(35, 83%, 60%);
+    --light-pink: hsl(350, 98%, 90%)
   }
   
   /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
@@ -74,9 +75,27 @@
   a:visited {}
   
   /*  ----- Navigation ----- Override text links for navigation only.  */
-  nav {}
-  nav a {}
-  nav a:hover {}
+  nav {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  nav a {
+    background-color: var(--soft-magenta);
+    border: 2px solid salmon;
+    border-radius: 5px 0;
+    color: var(--light-pink);
+    font-size: 1.25em;
+    font-weight: bold;
+    margin: 5px;
+    padding: 4px;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    background-color: var(--light-pink);
+    color:var(--soft-magenta);
+  }
   
   /*  -----  Typography  ----- */
   p {}
