@@ -194,8 +194,10 @@
   }
 
   .gallery figure{
-    height: 100%;
-    border: 7px solid var(--soft-magenta);
+    border-bottom: 5px solid var(--light-pink);
+    width: 40%;
+    margin: 0.75%;
+    padding: 0.75%;
   }
   
   .floatright {}
