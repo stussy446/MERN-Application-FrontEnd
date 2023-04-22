@@ -186,7 +186,17 @@
   object {}
   
   /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
-  .gallery {}
+  .gallery {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    padding: 0;
+  }
+
+  .gallery figure{
+    height: 100%;
+    border: 7px solid var(--soft-magenta);
+  }
   
   .floatright {}
   .floatleft {}
