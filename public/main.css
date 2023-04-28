@@ -193,10 +193,10 @@
     font-size: 120%;
   }
 
-    legend {
-      background-color: aliceblue;
-      border-top: 2px solid var(--bright-orange);
-    }
+  legend {
+    background-color: aliceblue;
+    border-top: 2px solid var(--bright-orange);
+  }
 
   label {
     display: block;

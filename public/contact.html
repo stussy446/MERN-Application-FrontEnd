@@ -6,7 +6,6 @@
     <title>Steve Rector</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
 </head>
 <body>
     <header>
@@ -25,14 +24,14 @@
                 Please fill out at minimum the required fields, and I will get back to you as soon as I can!
             </p>
             <article>
-                <form action="#" method="post" enctype="multipart/form-data" name="contactForm" id="contactForm">
+                <form action="/contact" method="POST">
 
                     <fieldset>
                         <legend>Please submit your contact information below</legend>
                         <label for="name" class="required">First and Last Name</label>
                         <input type="text" name="name" id="name" placeholder="Firstname Lastname" required autofocus>
                         <label for="email" class="required">Email</label>
-                        <input type="email" name="email" id="email" placeholder="email@domain.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                        <input type="email" name="email" id="email" placeholder="email@domain.com"  required>
                         <label for="message" class="required">Send me a message</label>
                         <textarea name="message" id="message" placeholder="Hey Steve, I would like to say...." rows="7" cols="100" required></textarea>
                     </fieldset>
@@ -70,7 +69,6 @@
                         <legend>When finished, press the Submit button below to complete the process</legend>
                         <button type="submit">Submit</button>
                     </fieldset>
-
                 </form>
             </article>
         </section>

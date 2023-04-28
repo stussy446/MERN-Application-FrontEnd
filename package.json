@@ -1,7 +1,7 @@
 {
-  "name": "concept-app",
+  "name": "steve-rector-website",
   "version": "1.0.0",
-  "description": "Web Concept app using Node and Express",
+  "description": "Server for Steve Rector's website",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
