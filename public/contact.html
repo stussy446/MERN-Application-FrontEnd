@@ -26,14 +26,15 @@
             </p>
             <article>
                 <form action="#" method="post" enctype="multipart/form-data" name="contactForm" id="contactForm">
+
                     <fieldset>
                         <legend>Please submit your contact information below</legend>
-                        <label for="name">First and Last Name</label>
-                        <input type="text" name="name" id="name" placeholder="Firstname Lastname" required>
-                        <label for="email">Email</label>
+                        <label for="name" class="required">First and Last Name</label>
+                        <input type="text" name="name" id="name" placeholder="Firstname Lastname" required autofocus>
+                        <label for="email" class="required">Email</label>
                         <input type="email" name="email" id="email" placeholder="email@domain.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
-                        <label for="message">Send me a message</label>
-                        <textarea name="message" id="message" placeholder="Example message text...." rows="7" cols="100" required></textarea>
+                        <label for="message" class="required">Send me a message</label>
+                        <textarea name="message" id="message" placeholder="Hey Steve, I would like to say...." rows="7" cols="100" required></textarea>
                     </fieldset>
 
                     <fieldset>
@@ -45,7 +46,7 @@
                                 <option value="VideoShare">Video Sharing</option>
                                 <option value="InPerson">In Person</option>
                             </select>
-                        <p><strong>What type of software development are you most interested in speaking about?</strong></p>
+                        <p>What type of software development are you most interested in speaking about?
                             <label for="web">
                                 <input type="radio" name="development" id="web" value="Web">
                             Web</label>
@@ -53,12 +54,23 @@
                                 <input type="radio" name="development" id="game" value="Game">
                             Game</label>
                             <label for="machineLearning">
-                                <input type="radio" name="development" id="machineLearning" value="machineLearning">
+                                <input type="radio" name="development" id="machineLearning" value="MachineLearning">
                             Machine Learning</label>
                             <label for="other">
-                                <input type="radio" name="development" id="other" value="other">
-                            Other</label
+                                <input type="radio" name="development" id="other" value="Other">
+                            Other</label>
+                        </p>
+                        <p><label for="support">
+                            <input type="checkbox" name="support" id="support" value="Yes" checked/>Keep me up-to-date on any articles or videos published 
+                            by Steve</label>
+                        </p>
                     </fieldset>
+
+                    <fieldset>
+                        <legend>When finished, press the Submit button below to complete the process</legend>
+                        <button type="submit">Submit</button>
+                    </fieldset>
+
                 </form>
             </article>
         </section>
