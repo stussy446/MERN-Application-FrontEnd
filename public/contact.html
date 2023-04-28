@@ -33,8 +33,31 @@
                         <label for="email">Email</label>
                         <input type="email" name="email" id="email" placeholder="email@domain.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
                         <label for="message">Send me a message</label>
-                        <textarea name="message" id="message" placeholder="Example message text...." rows="12" cols="60" required></textarea>
+                        <textarea name="message" id="message" placeholder="Example message text...." rows="7" cols="100" required></textarea>
+                    </fieldset>
 
+                    <fieldset>
+                        <legend>Provide any additional information related to your inquiry</legend>
+                        <label for="commStyle">How would you like to continue our conversation?</label>
+                            <select name="commStyle" id="how">
+                                <option value="Email">Email</option>
+                                <option value="Phone">Phone</option>
+                                <option value="VideoShare">Video Sharing</option>
+                                <option value="InPerson">In Person</option>
+                            </select>
+                        <p><strong>What type of software development are you most interested in speaking about?</strong></p>
+                            <label for="web">
+                                <input type="radio" name="development" id="web" value="Web">
+                            Web</label>
+                            <label for="game">
+                                <input type="radio" name="development" id="game" value="Game">
+                            Game</label>
+                            <label for="machineLearning">
+                                <input type="radio" name="development" id="machineLearning" value="machineLearning">
+                            Machine Learning</label>
+                            <label for="other">
+                                <input type="radio" name="development" id="other" value="other">
+                            Other</label
                     </fieldset>
                 </form>
             </article>
