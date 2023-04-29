@@ -81,5 +81,5 @@ app.post("/contact", (req, res) => {
         </section>
     ${htmlBottom}
     `
-    )})
+)})
 
