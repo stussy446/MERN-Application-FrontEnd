@@ -27,6 +27,7 @@
     --soft-white: hsl(0, 0%, 94%);
     --shamrock: hsl(145, 63%, 49%);
     --silver-sand: hsl(205, 17%, 63%);
+    --background-blue: rgb(187, 219, 224)
   }
   
   /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
@@ -37,7 +38,7 @@
     background-position: top left;
     background-repeat: no-repeat;
     font-family: 'Fira Sans', sans-serif;
-    color: var(--bright-orange);
+    color: var(--moderate-blue);
   }
   
   /*  ----- Page layout blocks -----  */
@@ -54,10 +55,17 @@
     border-right: 5px solid var(--very-soft-blue);
     margin: 0.5% 1.5%;
     padding: 0 1%;
+    background-color: var(--background-blue) ;
+
   }
   
   section {}
-    article {}
+
+    article {
+
+      border-bottom: 2px solid var(--bright-orange);
+    }
+
       #topic1 {}
       #topic2 {}
   div {}
@@ -305,7 +313,12 @@
 
   .gallery figcaption {
     margin-top: 2px;
-    font-size: medium;
+    font-size: large;
+    padding-left: 1%;
+  }
+
+  figure img {
+    width: 100%;
   }
 
   
