@@ -1,6 +1,8 @@
 'use strict';
 
 const express = require('express');
+const nodemailer = require('nodemailer');
+
 const app = express();
 const PORT = 3000;
 
@@ -56,6 +58,36 @@ app.post("/contact", (req, res) => {
     let development = req.body["development"];
     let support = req.body["support"];
 
+    // uses nodemailer to send information from form to a test email account
+    async function main(){
+        const transporter = nodemailer.createTransport({
+            host: 'smtp.ethereal.email',
+            port: 587,
+            secure:false,
+            auth: {
+                user: 'lilian.ward44@ethereal.email',
+                pass: '1jCrs3FeKEU3g2VRM9'
+            }
+        });
+
+        // sends email with user's name, email and message provided in the
+        const info = await transporter.sendMail({
+            from: `${name}, <${email}`,
+            to: "lilian.ward44@ethereal.email",
+            subject: "Testing test 123",
+            text: `${message}`,
+            html: `
+            <p>${message}</p>
+            <p>My preferred communication style is ${commStyle} and I am interested in speaking about ${development}.</p>
+            `,
+        });
+
+        console.log("Message sent: %" + info.messageId);
+    }
+
+    main()
+    .catch(e => console.log(e));
+  
     res.send(`
     ${htmlTop}
     <h2>Thank You For Your Response!</h2>
