@@ -56,7 +56,14 @@ app.post("/contact", (req, res) => {
     let message = req.body["message"];
     let commStyle = req.body["commStyle"];
     let development = req.body["development"];
-    let support = req.body["support"];
+    let subscribe = req.body["subscribe"];
+
+    // if subscribe returns an array then join it as a string, otherwise leave as is
+    if(typeof(subscribe) == Array)
+    {
+        subscribe = subscribe.join(', ');
+    }
+
 
     // uses nodemailer to send information from form to a test email account
     async function main(){
@@ -70,7 +77,7 @@ app.post("/contact", (req, res) => {
             }
         });
 
-        // sends email with user's name, email and message provided in the
+        // sends email with user's  content provided in the form
         const info = await transporter.sendMail({
             from: `${name}, <${email}`,
             to: "lilian.ward44@ethereal.email",
@@ -105,7 +112,7 @@ app.post("/contact", (req, res) => {
                 </p>
             </article>
             <article>
-                <p>Finally, it looks like you chose <strong>${support}</strong> for keeping up-to-date with my content.</p>
+                <p>Finally, it looks like you chose <strong>${subscribe}</strong> for keeping up-to-date with my content.</p>
             </article>
         </section>
         <section>
