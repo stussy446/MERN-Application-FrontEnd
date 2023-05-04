@@ -176,14 +176,26 @@
   ins {}
   
   /*  ----- Table ----- */
-  table {}
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  tr th,
+  tr td {
+    border: 1px solid gray;
+    padding: 1%;
+  }
+
+  th {}
+
+
   caption {}
   thead {}
   tbody {}
   tfoot {}
   tr {}
     tr:nth-child(even) {}
-  th {}
   td {}
     td:nth-child(1) {}
   colgroup {}
