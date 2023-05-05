@@ -2,6 +2,7 @@
 
 const express = require('express');
 const nodemailer = require('nodemailer');
+const products = require('./products.js').products;
 
 const app = express();
 const PORT = 3000;
@@ -31,6 +32,7 @@ let htmlTop = `
 <a href="index.html">Home</a>
 <a href="contact.html">Contact</a>
 <a href="gallery.html">Gallery</a>
+<a href="order.html">Order</a>
 </nav>
 <main>
 `
@@ -117,6 +119,51 @@ app.post("/contact", (req, res) => {
         </section>
         <section>
             <h3>Thanks again for your feedback and information, I am looking forward to speaking further!</h3>
+        </section>
+    ${htmlBottom}
+    `
+)})
+
+function compareUserInput(productInput){
+    for(const option of products){
+        if(option.product === productInput){
+            return option;
+        }
+    }
+}
+
+app.post("/order", (req, res) => {
+    let name = req.body.name;
+    let email = req.body.email;
+    let address = req.body.address;
+    let choice = req.body.choice;
+    let quantity = req.body.quantity;
+    let deliveryInstruction = req.body.delivery;
+    let chosenProductObj = compareUserInput(choice);
+
+    let cost = (parseFloat(chosenProductObj.price) * parseInt(quantity)).toLocaleString("en-US", {style:"currency", currency:"USD"});
+
+    res.send(`
+    ${htmlTop}
+    <h2>Thank You For Your Response!</h2>
+        <section>
+            <h3>You have submitted the following order information:</h3>
+            <article>
+                <p>Your name is <strong>${name}</strong> and your email is <strong>${email}</strong>.</p>
+                <p>
+                    Your delivery address is <strong>${address}</strong> and you have provided the following 
+                    delivery instructions: <strong>${deliveryInstruction}</strong>
+                </p>
+            </article>
+            <article>
+                <p>You have decided to go with the <strong>${choice}</strong> and have ordered a total of <strong>${quantity}</strong>.</p>
+            </article>
+            <article>
+                <p>
+                    Given the above information, this will bring your total to <strong>${cost}</strong>, thank you for taking care of your 
+                    special pet friend, please let us know if you have any questions!
+                </p>
+            </article>
         </section>
     ${htmlBottom}
     `
