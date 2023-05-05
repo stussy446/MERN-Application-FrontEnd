@@ -13,7 +13,7 @@ app.use(express.urlencoded({
 
 app.use(express.static('public'));
 
-// Define global variables for the top and bottom HTML neeeded..
+// Define global variables for the top and bottom HTML neeeded
 let htmlTop = `
 <!DOCTYPE html>
 <html>
@@ -124,9 +124,14 @@ app.post("/contact", (req, res) => {
     `
 )})
 
-function compareUserInput(productInput){
+/**
+ * Receives a product choice string and returns an object representing the chosen product's information 
+ * @param {string} productChoice - choice provided by customer
+ * @returns {object} chosen product's object containing all if its related information
+ */
+function compareUserInput(productChoice){
     for(const option of products){
-        if(option.product === productInput){
+        if(option.product === productChoice){
             return option;
         }
     }
@@ -139,9 +144,10 @@ app.post("/order", (req, res) => {
     let choice = req.body.choice;
     let quantity = req.body.quantity;
     let deliveryInstruction = req.body.delivery;
+    
     let chosenProductObj = compareUserInput(choice);
 
-    let cost = (parseFloat(chosenProductObj.price) * parseInt(quantity)).toLocaleString("en-US", {style:"currency", currency:"USD"});
+    let cost = (chosenProductObj.price * parseInt(quantity)).toLocaleString("en-US", {style:"currency", currency:"USD"});
 
     res.send(`
     ${htmlTop}
@@ -161,7 +167,7 @@ app.post("/order", (req, res) => {
             <article>
                 <p>
                     Given the above information, this will bring your total to <strong>${cost}</strong>, thank you for taking care of your 
-                    special pet friend, please let us know if you have any questions!
+                    special pet friend and please let us know if you have any questions!
                 </p>
             </article>
         </section>
