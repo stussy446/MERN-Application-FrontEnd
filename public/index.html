@@ -26,6 +26,8 @@
                 <a href="#frontend-design">Frontend Design</a>
                 <a href="#optimizing-images">Optimizing Images</a>
                 <a href="#cascading-stylesheets">Cascading Stylesheets</a>
+                <a href="#javascript">JavaScript</a>
+
             </nav>
             <article id="web-servers">
                 <h3>Web Servers</h3>
@@ -151,6 +153,37 @@
                         JavaScript. This allows for dynamic styling based on whatever logic is provided in the JavaScript code (for example, potentially turning a specific element a different color
                         depending on if the user left-clicks or right-clicks on the element).
                     </p>
+            </article>
+            <article id="javascript">
+                <h3>JavaScript</h3>
+                <p>
+                    <!--What are the main JavaScript data types?-->
+                    The first data type is a <strong>number</strong>, which is a double precision floating point number. The second data type is a <strong>boolean</strong> value, which can be either true or false. The third data 
+                    type is a <strong>string</strong>, which is enclosed with either double quotes or single quotes. In JavaScript, a developer can also use backticks to use a Template Literal with strings in order to evaluate 
+                    expressions inside of the template literal. The fourth data type is a <strong>symbol</strong>, which is a built in object whose constructor returns a symbol value. The fifth type is the special values 
+                    <strong>undefined and null</strong>, which both indicate the absence of a value. The sixth (and final) type is an <strong>object</strong>, which is a set of name-value pairs (also called properties).
+                </p>
+                <p>
+                    <!--How are objects, arrays, and JSON used?-->
+                    <strong>Objects</strong> are mainly used in CRUD operations (Create Read Update Delete) which developers can use to view/modify properties inside of objects. Developers can also get the names (keys) of all properties of an
+                    object by using the Object.keys() method. An example would be having several objects containing a person's name, birthday, and favorite food, which then can be used in a multitude of ways to show that 
+                    information on a website, in logic to match user inputs, etc. <strong>Arrays</strong> are objects whose properties are strings '0', '1', '2', etc, and they are typically used to iterate through a list of elements using loops.
+                    An example would be an array containing the names of all students, which you could then iterate through with a loop to print all of the names to the console. <strong>JSON (JavaScript Object Notation)</strong> is used for
+                    exchanging data between applications in a programming languge independant wway. An example would be turning JSON into a string using JSON.stringify(), sending that data over to a separate application, and then
+                    using something like JSON.parse() in that application to create a object representation of that received string for use in that application.
+                </p>
+                <p>
+                    <!--How are conditionals and loops used?-->
+                    <strong>Conditionals</strong> are used to evaluate expressions that result in a boolean value (true or false). An example would be an expression such as 1 === 1, which would result in a true boolean value because it is a true 
+                    statement that 1 is equal to 1. Developers can use if/if-then-else conditionals, switch statements, or conditional operators to evaluate expressions. In JavaScript, there are strict equality operators (===, !==) as well as 
+                    loose eqality operators (==, !=), and it is always recommended to use strict operators in order to help avoid confusion from JavaScript''s automatic conversion. For example, with a loose equality operator, something like '7' == 7 would 
+                    incorrectly result in a true boolean result because the values are compared using a common data type with loose equality operators. <strong>Loops</strong> are used to iterate through a collection of elements in data types like arrays, objects, etc. 
+                    Developers can use while loops, do while loops, for loops, for of loops, or for in loops (specifically to iterate over the properties of an object). Loops are very useful for a wide range of tasks, including looping through a collection of data 
+                    for an element that matches a provided value, sorting data in a certain way, creating a different collection of data based on elements that match a provided criteria, and much more.
+                </p>
+                <p>
+                    <!--What is object-oriented programming?-->
+                </p>
             </article>
         </section>
     </main>
