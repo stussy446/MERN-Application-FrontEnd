@@ -23,11 +23,12 @@
     --soft-magenta: hsla(304, 69%, 64%, 0.8);
     --bright-orange: hsl(35, 83%, 60%);
     --light-pink: hsl(350, 98%, 90%);
-    --light-salmon: hsl(6, 92%, 70%);
+    --light-salmon: hsl(6, 74%, 82%);
     --soft-white: hsl(0, 0%, 94%);
     --shamrock: hsl(145, 63%, 49%);
     --silver-sand: hsl(205, 17%, 63%);
-    --background-blue: rgb(187, 219, 224)
+    --background-blue: rgb(187, 219, 224);
+    --dark-silver: hsl(206, 14%, 46%);
   }
   
   /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
@@ -62,7 +63,6 @@
   section {}
 
     article {
-
       border-bottom: 2px solid var(--bright-orange);
     }
 
@@ -183,20 +183,40 @@
 
   tr th,
   tr td {
-    border: 1px solid gray;
+    border: 2px solid gray;
     padding: 1%;
+    margin: 1%;
   }
 
-  th {}
+  th {
+    background-color: var(--light-salmon);
+    color: var(--moderate-blue);
+  }
+  
+  td {
+    background-color: var(--soft-white);
+    color: var(--dark-silver);
+  }
+
+  .number-cell {
+    text-align: right;
+  }
+
+  caption {
+    margin-bottom: 1%;
+    font-size: 125%;
+    font-weight: 800;
+    font-style: italic;
+    color: var(--moderate-blue);
+  }
 
 
-  caption {}
   thead {}
   tbody {}
   tfoot {}
   tr {}
     tr:nth-child(even) {}
-  td {}
+ 
     td:nth-child(1) {}
   colgroup {}
   data {}
