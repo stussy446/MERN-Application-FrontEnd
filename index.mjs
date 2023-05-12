@@ -1,8 +1,6 @@
-'use strict';
-
-const express = require('express');
-const nodemailer = require('nodemailer');
-const products = require('./products.js').products;
+import express from 'express';
+import nodemailer from 'nodemailer';
+import {products} from './products.mjs';
 
 const app = express();
 const PORT = 3000;
@@ -33,6 +31,7 @@ let htmlTop = `
 <a href="contact.html">Contact</a>
 <a href="gallery.html">Gallery</a>
 <a href="order.html">Order</a>
+<a href="staff.html">Staff</a>
 </nav>
 <main>
 `
