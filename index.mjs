@@ -186,6 +186,6 @@ app.use((error, req, res, next) => {
     console.log(error.stack);
     res.status(500).send(`
     <h2>Uh Oh...</h2>
-    <p>It looks like something went wrong, please try again</p>
+    <p>It looks like something went wrong, please try again.</p>
     `)
 });

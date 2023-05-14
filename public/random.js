@@ -22,8 +22,8 @@ function ShowUserInfo(user){
 }
 
 /**
- * Generate
- * @param {} event 
+ * Generates a random user with either the browser or the server depending on what button the user has clicked
+ * @param {event} event 
  */
 async function CreateRandomUser(event) {
     event.preventDefault();
