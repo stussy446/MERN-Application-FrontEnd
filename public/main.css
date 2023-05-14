@@ -27,6 +27,7 @@
     --soft-white: hsl(0, 0%, 94%);
     --shamrock: hsl(145, 63%, 49%);
     --silver-sand: hsl(205, 17%, 63%);
+    --light-silver-sand: hsl(206, 67%, 92%);
     --background-blue: rgb(187, 219, 224);
     --dark-silver: hsl(206, 14%, 46%);
   }
@@ -183,7 +184,7 @@
 
   tr th,
   tr td {
-    border: 2px solid gray;
+    border: 2px solid var(--silver-sand);
     padding: 1%;
     margin: 1%;
   }
@@ -194,7 +195,6 @@
   }
   
   td {
-    background-color: var(--soft-white);
     color: var(--dark-silver);
   }
 
@@ -215,7 +215,10 @@
   tbody {}
   tfoot {}
   tr {}
-    tr:nth-child(even) {}
+    
+  tr:nth-child(even) {
+      background-color: var(--light-silver-sand);
+    }
  
     td:nth-child(1) {}
   colgroup {}

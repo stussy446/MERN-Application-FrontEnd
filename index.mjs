@@ -1,9 +1,11 @@
 import express from 'express';
-import nodemailer from 'nodemailer';
+import 'dotenv/config';
+import asyncHandler from 'express-async-handler';
 import {products} from './products.mjs';
+import nodemailer from 'nodemailer';
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT;
 
 app.use(express.urlencoded({
     extended: true
@@ -174,3 +176,16 @@ app.post("/order", (req, res) => {
     `
 )})
 
+app.get('/random-person', asyncHandler(async (req, res) => {
+    const response = await fetch("https://randomuser.me/api/");
+    const data = await response.json();
+    res.send(data);
+}));
+
+app.use((error, req, res, next) => {
+    console.log(error.stack);
+    res.status(500).send(`
+    <h2>Uh Oh...</h2>
+    <p>It looks like something went wrong, please try again</p>
+    `)
+});

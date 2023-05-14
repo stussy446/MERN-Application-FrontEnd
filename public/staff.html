@@ -24,11 +24,14 @@
         <section>
             <h2>Staff</h2>
             <article id="staff">
-                <p>On this page, you will be able to find staff.</p>
-                <button type="submit" id="browserListen">Browser</button>
-                <button type="submit" id="serverListen">Server</button>
+                <p>
+                    On this page, you will be able to generate random users from this <a href="https://randomuser.me/">random user generator</a>,
+                    click either button below to get started!
+                </p>
+                <button id="browserListen" value="Call from browser">Call From Browser</button>
+                <button id="serverListen" value="Call from server">Call From Server</button>
                 <table>
-                    <caption>Staff Table</caption>
+                    <caption>Table of Your Random Users</caption>
                     <thead>
                         <tr>
                             <th>Portrait</th>
@@ -37,13 +40,8 @@
                             <th>City</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                            <td>TBD</td>
-                        </tr>
+                    <tbody id="generateUser">
+                       <!--rows dynamically inserted here-->
                     </tbody>
                 </table>
             </article>
