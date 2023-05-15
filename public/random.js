@@ -30,7 +30,7 @@ async function CreateRandomUser(event) {
     const eventTargetId = event.target.getAttribute('id');
 
     const url = eventTargetId == 'browserListen' ? "https://randomuser.me/api/"
-    : "/random-person"
+    : "/generate-person"
 
     try {
         const res = await fetch(url);
