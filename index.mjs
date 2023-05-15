@@ -176,6 +176,20 @@ app.post("/order", (req, res) => {
     `
 )})
 
+/* a6 extra credit */
+let everyTen = 0;
+let totalCalls = 0;
+
+app.use('/random-person', (req, res, next) => {
+    totalCalls += 1;
+
+    if(totalCalls % 10 == 0){
+        console.log(`You have now made ${totalCalls} API calls to the Express server.`);
+    }
+
+    next();
+})
+
 app.get('/random-person', asyncHandler(async (req, res) => {
     const response = await fetch("https://randomuser.me/api/");
     const data = await response.json();
