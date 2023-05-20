@@ -15,7 +15,7 @@ function App() {
       <BrowserRouter>
 
         <header className="App-header">
-          <h1>Name of Website or App 
+          <h1>Steve Rector
             {/* <img src={logo} className="App-logo" alt="logo" /> */}
           </h1>
         </header>
@@ -34,7 +34,7 @@ function App() {
         </main>
         
         <footer>
-          <p><cite>&copy; Year Name</cite></p>
+          <p><cite>&copy; 2023</cite></p>
         </footer>
         
         </BrowserRouter>
