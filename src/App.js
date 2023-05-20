@@ -36,7 +36,7 @@ function App() {
         </main>
         
         <footer>
-          <p><cite>&copy; 2023</cite></p>
+          <p><cite>&copy; 2023 Steve Rector</cite></p>
         </footer>
         
         </BrowserRouter>
