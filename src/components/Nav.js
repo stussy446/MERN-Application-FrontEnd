@@ -8,8 +8,10 @@ function Nav() {
   return (
     <nav className="App-nav">
         <Link to="/">Home</Link>
-        <Link to="../blog">Blog</Link>
-        <Link to="../contact">Contact</Link>
+        <Link to="../gallery">Gallery</Link>
+        <Link to="../order">Order</Link>
+        <Link to="../staff">Staff</Link>
+
     </nav>
   );
 }
