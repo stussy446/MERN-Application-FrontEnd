@@ -2,10 +2,12 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import { products } from './data/products.mjs';
+import Nav from './components/Nav';
+
+import HomePage from './pages/HomePage';
 import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
-import HomePage from './pages/HomePage';
-import Nav from './components/Nav';
 
 import './App.css';
 
