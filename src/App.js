@@ -8,6 +8,7 @@ import Nav from './components/Nav';
 import HomePage from './pages/HomePage';
 import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
+import GalleryPage from './pages/GalleryPage';
 
 import './App.css';
 
@@ -28,6 +29,7 @@ function App() {
           <section className="App-article">
             <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/gallery" element={<GalleryPage />} />
                 <Route path="/contact" element={<ContactPage />} /> 
                 <Route path="/blog" element={<BlogPage />} /> 
 

@@ -11,9 +11,9 @@
         https://www.npmjs.com/package/modern-normalize
       */         
 
-/* Component-specific stylesheets, if any. 
-  @import "component1.css";   
-*/
+/* Component-specific stylesheets, if any. */
+  /* @import "component1.css";  */
+  @import "~react-image-gallery/styles/css/image-gallery.css";
 
 /*   ----- Variables  -----  */
 :root {
@@ -336,12 +336,12 @@ embed {}
 object {}
 
 /*  ----- Classes for alignment, positioning, widths, grids, embellishments, and animation -----  */
-.gallery {
+/* .gallery {
   display: flex;
   flex-flow: row wrap;
   margin: 0;
   padding: 0;
-}
+} */
 
 .gallery figure{
   border-bottom: 5px solid var(--light-pink);

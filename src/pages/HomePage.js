@@ -4,7 +4,7 @@ function HomePage() {
     return (
         <>
             <h2>Web Dev Concepts</h2>
-            <nav class="homenav">
+            <nav className="homenav">
                 <a href="#web-servers">Web Servers</a>
                 <a href="#frontend-design">Frontend Design</a>
                 <a href="#optimizing-images">Optimizing Images</a>
@@ -29,7 +29,7 @@ function HomePage() {
                     a1-rectors/, vs on the local computer it is referred to as index.html. The next difference noticed was the web server's request URL's <strong>protocol</strong>
                     is HTTPS, vs the local computer protocol being file. The web server tab also has a lot more <strong>Response Headers</strong> (including Connection, Content Encoding, etc.)
                     and <strong>Request Headers</strong> (including Accept-Encoding, Cookie, etc.) than the local computer tab. As a last note, both the server and computer had 200 
-                    <strong>status codes</strong>.
+                    <strong> status codes</strong>.
                 </p>
                 {/* <!--Explain why the favicon.ico file has a status 200 but the main.css and main.js files do not--> */}
                 <p>
