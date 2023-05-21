@@ -2,7 +2,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import { products } from './data/products.mjs';
+// import { products } from './data/products.mjs';
 import Nav from './components/Nav';
 
 import HomePage from './pages/HomePage';
