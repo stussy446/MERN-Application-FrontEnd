@@ -47,7 +47,7 @@ function OrderPage() {
                     <fieldset>
                         <legend>Press the Submit button when you are ready to confirm your order</legend>
                         <button onClick={e => {
-                            alert("Thanks for odering with us!")
+                            alert("Thanks for ordering with us!")
                             e.preventDefault();
                         }}>Submit</button>
                         
