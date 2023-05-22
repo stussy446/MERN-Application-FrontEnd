@@ -1,5 +1,5 @@
 // Define a JavaScript object with arrays of products, their company names, and prices: 
-export const products = [
+const products = [
     { company: 'AGYM', product: 'Spinning Cat Scratcher Ball', price: 52.99 },
     { company: 'Jasonwell', product: 'Foldable Dog Pool', price: 27.25 },
     { company: 'Expawlorer', product: 'Dog Fence Window', price: 30.50 },
@@ -7,8 +7,10 @@ export const products = [
     { company: 'Drool\'d', product: 'Cat Hamster Wheel', price: 349.75 }
 ];
 
+export default products;
+
 // Display the object in a table in the terminal console to confirm it works:
 // https://developer.mozilla.org/en-US/docs/Web/API/Console/table
-console.table(products); 
+// console.table(products); 
 
  
