@@ -6,12 +6,12 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 
 import HomePage from './pages/HomePage';
-import BlogPage from './pages/BlogPage';
 import ContactPage from './pages/ContactPage';
 import GalleryPage from './pages/GalleryPage';
 
 import './App.css';
 import StaffPage from './pages/StaffPage';
+import OrderPage from './pages/OrderPage';
 
 function App() {
   return (
@@ -33,7 +33,7 @@ function App() {
                 <Route path="/gallery" element={<GalleryPage />} />
                 <Route path="/contact" element={<ContactPage />} /> 
                 <Route path="/staff" element={<StaffPage/>} />   
-                <Route path="/blog" element={<BlogPage />} /> 
+                <Route path="/order" element={<OrderPage />}/>
             </Routes>
           </section>
         </main>
