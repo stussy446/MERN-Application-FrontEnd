@@ -11,6 +11,7 @@ import ContactPage from './pages/ContactPage';
 import GalleryPage from './pages/GalleryPage';
 
 import './App.css';
+import StaffPage from './pages/StaffPage';
 
 function App() {
   return (
@@ -31,8 +32,8 @@ function App() {
                 <Route path="/" element={<HomePage />} />
                 <Route path="/gallery" element={<GalleryPage />} />
                 <Route path="/contact" element={<ContactPage />} /> 
+                <Route path="/staff" element={<StaffPage/>} />   
                 <Route path="/blog" element={<BlogPage />} /> 
-
             </Routes>
           </section>
         </main>
