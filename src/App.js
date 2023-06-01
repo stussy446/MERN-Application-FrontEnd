@@ -17,8 +17,6 @@ import OrderPage from './pages/OrderPage';
 function App() {
   const [games, setGames] = useState([]);
 
-
-
   return (
     <div className="App">
       <BrowserRouter>

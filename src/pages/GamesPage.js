@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import { useNavigate } from "react-router-dom";
 
+import GameList from "../components/GameList";
+
 function GamesPage({setGame}) {
 
     const redirect = useNavigate();
@@ -13,11 +15,13 @@ function GamesPage({setGame}) {
         setGames(games);
     }
 
+    // EDIT game in collection
     const onEditGame = async game => {
         setGames(game);
         redirect('/games/update')
     }
 
+    // DELETE game in collection
     const onDeleteGame = async _id => {
         const response = await fetch(`/games/${_id}`, {method: 'DELETE'});
         if (response === 204) {
@@ -33,8 +37,10 @@ function GamesPage({setGame}) {
     return (
         <>
         <h2>List of Games Beaten</h2>
-        <p>This page provides a list of video games beaten over the past 12 months. Each game's title, hours to complete, and release date are included.</p>
-        {/* games list component goes here when ready */}
+        <article>
+            <p>This page provides a list of video games beaten over the past 12 months. Each game's title, hours to complete, and release date are included.</p>
+            <GameList games={games} onEditGame={onEditGame} onDeleteGame={onDeleteGame} />
+        </article>
         </>
     );
 }
