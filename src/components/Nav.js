@@ -11,6 +11,7 @@ function Nav() {
         <Link to="../gallery">Gallery</Link>
         <Link to="../order">Order</Link>
         <Link to="../staff">Staff</Link>
+        <Link to="../games">Games</Link>
     </nav>
   );
 }
