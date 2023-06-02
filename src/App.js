@@ -8,11 +8,12 @@ import Nav from './components/Nav';
 import HomePage from './pages/HomePage';
 import ContactPage from './pages/ContactPage';
 import GalleryPage from './pages/GalleryPage';
-import GamesPage from './pages/GamesPage';
-
-import './App.css';
 import StaffPage from './pages/StaffPage';
 import OrderPage from './pages/OrderPage';
+import GamesPage from './pages/GamesPage';
+import CreateGamePage from './pages/CreateGamePage';
+
+import './App.css';
 
 function App() {
   const [games, setGames] = useState([]);
@@ -36,6 +37,7 @@ function App() {
                 <Route path="/staff" element={<StaffPage/>} />   
                 <Route path="/order" element={<OrderPage />}/>
                 <Route path="/games" element={<GamesPage setGames={setGames} />} />
+                <Route path="/games/create" element={<CreateGamePage setGames={setGames} />} />
             </Routes>
           </section>
         </main>
