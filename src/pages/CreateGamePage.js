@@ -4,11 +4,11 @@ import { useNavigate } from "react-router-dom";
 function CreateGamePage() {
     const [title, setTitle] = useState("Game Title");
     const [hoursToBeat, setHoursToBeat] = useState(0);
-    const [releaseDate, setReleaseDate] = useState('dd-mm-yyyy')
+    const [releaseDate, setReleaseDate] = useState('1111/01/01')
 
     const redirect = useNavigate()
 
-    const addGame = async (title, hoursToBeat, releaseDate) => {
+    const addGame = async () => {
         const newGame = {title, hoursToBeat, releaseDate};
 
         const response = await fetch('/games', {
@@ -23,8 +23,7 @@ function CreateGamePage() {
             alert('game added to collection.');
             redirect('/games');
         } else {
-            alert(`game failed to be added with status code ${response.status}`);
-            redirect('/games');
+            alert(`game failed to be added with status code ${response.status}, please make sure you have filled out all required fields`);
         };
     };
 
@@ -38,7 +37,7 @@ function CreateGamePage() {
             <form onSubmit={(e) => { e.preventDefault(); }}>
                 <fieldset>
                     <legend>Which game are you adding?</legend>
-                    <label for="title">Game title</label>
+                    <label htmlFor="title" className="required">Game title</label>
                     <input
                         type="text"
                         placeholder="Title of the game"
@@ -46,7 +45,7 @@ function CreateGamePage() {
                         onChange={e => setTitle(e.target.value)}
                         id="title" />
 
-                    <label for="hoursToBeat">Hours to complete</label>
+                    <label htmlFor="hoursToBeat" className="required">Hours to complete</label>
                     <input
                         type="number"
                         value={hoursToBeat}
@@ -54,7 +53,7 @@ function CreateGamePage() {
                         onChange={e => setHoursToBeat(e.target.value)}
                         id="hoursToBeat" />
 
-                    <label for="releaseDate">Release date</label>
+                    <label htmlFor="releaseDate" className="required">Release date</label>
                     <input
                         type="date"
                         placeholder="dd-mm-yyyy"
@@ -62,7 +61,7 @@ function CreateGamePage() {
                         onChange={e => setReleaseDate(e.target.value)}
                         id="releaseDate" />
 
-                    <label for="submit">
+                    <label htmlFor="submit">
                         <button
                             type="submit"
                             onClick={addGame}

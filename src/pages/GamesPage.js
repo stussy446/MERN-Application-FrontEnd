@@ -11,7 +11,7 @@ function GamesPage({setGame}) {
     // RETRIEVE all games in collection
     const retrieveAllGames = async () => {
         const response = await fetch('/games');
-        const games = response.json();
+        const games = await response.json();
         setGames(games);
     }
 
@@ -32,6 +32,10 @@ function GamesPage({setGame}) {
             console.error(`Failed to delete game with _id = ${_id}, status code = ${response.status}`);
         };
     };
+
+    useEffect(() => {
+        retrieveAllGames();
+    }, [])
   
 
     return (

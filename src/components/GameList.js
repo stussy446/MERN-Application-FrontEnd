@@ -13,7 +13,8 @@ function GameList({ games, onEditGame, onDeleteGame }) {
 
     return (
         <>
-        <p>Add Game <IoIosAddCircleOutline onClick={onStartCreate}/></p>
+        <p id="addGameParagraph">Add Game</p> 
+        <p><IoIosAddCircleOutline className="gameIcon" onClick={onStartCreate}/></p>
         <table id="games">
             <caption>Add and Edit Games</caption>
             <thead>
