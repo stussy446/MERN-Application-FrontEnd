@@ -123,6 +123,7 @@ nav a:hover {
   color: var(--moderate-blue);
   padding: 4px;
   margin: 2.5px;
+  display: flex;
   text-decoration: none;
 }
 
