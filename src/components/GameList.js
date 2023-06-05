@@ -1,5 +1,5 @@
 import React from "react";
-import { IoIosAddCircleOutline } from 'react-icons/io'
+import {HiPlusCircle} from 'react-icons/hi';
 import { useNavigate } from "react-router-dom";
 
 import Game from "./Game";
@@ -14,7 +14,7 @@ function GameList({ games, onEditGame, onDeleteGame }) {
     return (
         <>
         <p id="addGameParagraph">Add Game</p> 
-        <p><IoIosAddCircleOutline className="gameIcon" onClick={onStartCreate}/></p>
+        <p><HiPlusCircle className="gameIcon" onClick={onStartCreate}/></p>
         <table id="games">
             <caption>Add and Edit Games</caption>
             <thead>
