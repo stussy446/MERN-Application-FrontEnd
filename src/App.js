@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
 
 // import { products } from './data/products.mjs';
 import Nav from './components/Nav';
@@ -12,11 +11,12 @@ import StaffPage from './pages/StaffPage';
 import OrderPage from './pages/OrderPage';
 import GamesPage from './pages/GamesPage';
 import CreateGamePage from './pages/CreateGamePage';
+import EditGamePage from './pages/EditGamePage';
 
 import './App.css';
 
 function App() {
-  const [games, setGames] = useState([]);
+  const [game, setGameToEdit] = useState([]);
 
   return (
     <div className="App">
@@ -36,8 +36,10 @@ function App() {
                 <Route path="/contact" element={<ContactPage />} /> 
                 <Route path="/staff" element={<StaffPage/>} />   
                 <Route path="/order" element={<OrderPage />}/>
-                <Route path="/games" element={<GamesPage setGames={setGames} />} />
-                <Route path="/games/create" element={<CreateGamePage setGames={setGames} />} />
+                <Route path="/games" element={<GamesPage setGame={setGameToEdit} />} />
+                <Route path="/games/create" element={<CreateGamePage setGames={setGameToEdit} />} />
+                <Route path="/games/update" element={<EditGamePage gameToEdit={game}/>} />
+
             </Routes>
           </section>
         </main>

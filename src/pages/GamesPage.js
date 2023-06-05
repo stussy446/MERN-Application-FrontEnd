@@ -6,6 +6,7 @@ import GameList from "../components/GameList";
 function GamesPage({setGame}) {
 
     const redirect = useNavigate();
+
     const [games, setGames] = useState([]);
 
     // RETRIEVE all games in collection
@@ -17,7 +18,7 @@ function GamesPage({setGame}) {
 
     // EDIT game in collection
     const onEditGame = async game => {
-        setGames(game);
+        setGame(game);
         redirect('/games/update')
     }
 
@@ -35,7 +36,7 @@ function GamesPage({setGame}) {
 
     useEffect(() => {
         retrieveAllGames();
-    }, [])
+    }, [games])
   
 
     return (
