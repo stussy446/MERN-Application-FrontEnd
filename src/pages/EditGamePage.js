@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
 
+import TableHead from "../components/TableHead";
+
 function EditGamePage({gameToEdit}) {
     console.log(gameToEdit);
     const [title, setTitle] = useState(`${gameToEdit.title}`);
@@ -36,41 +38,42 @@ function EditGamePage({gameToEdit}) {
             <h2>Update Game Entry</h2>
             <p>On this page you can update the information of the selected game.</p>
         </article>
-            <form onSubmit={(e) => { e.preventDefault(); }}>
-                <fieldset>
-                    <legend>Which game are you updating?</legend>
-                    <label htmlFor="title" className="required">Game title</label>
-                    <input
-                        type="text"
-                        placeholder="Title of the game"
-                        value={title}
-                        onChange={e => setTitle(e.target.value)}
-                        id="title" />
-
-                    <label htmlFor="hoursToBeat" className="required">Hours to complete</label>
-                    <input
-                        type="number"
-                        value={hoursToBeat}
-                        placeholder="0"
-                        onChange={e => setHoursToBeat(e.target.value)}
-                        id="hoursToBeat" />
-
-                    <label htmlFor="releaseDate" className="required">Release date</label>
-                    <input
-                        type="date"
-                        placeholder="dd-mm-yyyy"
-                        value={releaseDate}
-                        onChange={e => setReleaseDate(e.target.value)}
-                        id="releaseDate" />
-
-                    <label htmlFor="submit">
-                        <button
-                            type="submit"
-                            onClick={editGame}
-                            id="submit"
-                        >Edit game</button> from the collection</label>
-                </fieldset>
-            </form>
+            <table id="gamesTable">
+                <caption>Update {gameToEdit.title} from the collection.</caption>
+                <TableHead />
+                <tbody>
+                    <tr>
+                        <td>
+                            <label htmlFor="title" className="required"></label>
+                            <input
+                                type="text"
+                                placeholder="Title of the game"
+                                value={title}
+                                onChange={e => setTitle(e.target.value)}
+                                id="title" />
+                        </td>
+                        <td>
+                            <label htmlFor="hoursToBeat" className="required"></label>
+                            <input
+                                type="number"
+                                value={hoursToBeat}
+                                placeholder="0"
+                                onChange={e => setHoursToBeat(e.target.value)}
+                                id="hoursToBeat" />
+                        </td>
+                        <td>
+                            <label htmlFor="releaseDate" className="required"></label>
+                            <input
+                                type="date"
+                                placeholder="dd-mm-yyyy"
+                                value={releaseDate}
+                                onChange={e => setReleaseDate(e.target.value)}
+                                id="releaseDate" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="wait" onClick={editGame}>Update Game</button>
         </>
     )
 }
