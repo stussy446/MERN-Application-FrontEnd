@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import { useNavigate } from "react-router-dom";
+import TableHead from '../components/TableHead';
 
 function CreateGamePage() {
     const [title, setTitle] = useState("Game Title");
@@ -35,10 +36,9 @@ function CreateGamePage() {
             <p>On this page you can add a newly beaten game to the list by providing the game's title, hours to complete, and release date.</p>
             <table id="gamesTable">
                 <caption>Add a new game to the collection.</caption>
+                <TableHead />
                 <tbody>
                     <tr>
-                        <td></td>
-                        <td></td>
                         <td>
                             <label htmlFor="title" className="required"></label>
                             <input
@@ -66,12 +66,10 @@ function CreateGamePage() {
                               onChange={e => setReleaseDate(e.target.value)}
                               id="releaseDate" />
                         </td>
-                        <td>
-                            <button class="wait" onClick={addGame}>Add Game</button>
-                        </td>
                     </tr>
                 </tbody>
             </table>
+            <button class="wait" onClick={addGame}>Add Game</button>
         </article>
         </>
     )
