@@ -12,6 +12,7 @@ import OrderPage from './pages/OrderPage';
 import GamesPage from './pages/GamesPage';
 import CreateGamePage from './pages/CreateGamePage';
 import EditGamePage from './pages/EditGamePage';
+import TopicsPage from './pages/TopicsPage';
 
 import './App.css';
 
@@ -32,6 +33,7 @@ function App() {
           <section className="App-article">
             <Routes>
                 <Route path="/" element={<HomePage />} />
+                <Route path="/topics" element={<TopicsPage />} />
                 <Route path="/gallery" element={<GalleryPage />} />
                 <Route path="/contact" element={<ContactPage />} /> 
                 <Route path="/staff" element={<StaffPage/>} />   

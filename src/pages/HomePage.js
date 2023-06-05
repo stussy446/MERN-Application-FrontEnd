@@ -1,4 +1,6 @@
 import React from 'react';
+import {AiFillLinkedin, AiFillFacebook} from 'react-icons/ai';
+import {MdVideogameAsset} from 'react-icons/md';
 
 function HomePage() {
     return (
@@ -37,7 +39,17 @@ function HomePage() {
             </p>
             </article>
             <p></p>
-            <i>If interested in reading more about the technologies in the site, checkout the <a href='/topics'>Topics </a>Page!</i>
+            <i>If interested in reading more about the technologies in the site, checkout the Topics Page!</i>
+            <article id="personal-links">
+            <h2>Lets Connect!</h2>
+            <p>
+                If you are interested to learn more about what I do, my previous experience, and/or if I would be a good fit for a potential role you may be looking to fill, you can
+                you can find more about me in the following locations:
+            </p>
+            <a className='socialLogos' href='https://www.linkedin.com/in/steve-rector/'><AiFillLinkedin size='50' /></a>
+            <a className='socialLogos' href='https://www.facebook.com/steve.rector.39'><AiFillFacebook size='50' /></a>
+            <a className='socialLogos' href='https://www.steverectorgames.com/'><MdVideogameAsset size='50' /></a>
+            </article>
         </>
     );
 }
