@@ -37,9 +37,9 @@ function HomePage() {
                 developers to create schemas/models that they want to represent a group of data in their database, and then these models can be used to turn the 
                 data from MongoDB into an object for use in the application, or an object can turn into a document to go into the database.
             </p>
-            </article>
             <p></p>
             <i>If interested in reading more about the technologies in the site, checkout the Topics Page!</i>
+            </article>
             <article id="personal-links">
             <h2>Lets Connect!</h2>
             <p>
