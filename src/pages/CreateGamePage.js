@@ -33,42 +33,46 @@ function CreateGamePage() {
         <article>
             <h2>Create New Game Entry</h2>
             <p>On this page you can add a newly beaten game to the list by providing the game's title, hours to complete, and release date.</p>
+            <table id="gamesTable">
+                <caption>Add a new game to the collection.</caption>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            <label htmlFor="title" className="required"></label>
+                            <input
+                                type="text"
+                                placeholder="Title of the game"
+                                value={title}
+                                onChange={e => setTitle(e.target.value)}
+                                id="title" />
+                        </td>
+                        <td>
+                            <label htmlFor="hoursToBeat" className="required"></label>
+                            <input
+                               type="number"
+                               value={hoursToBeat}
+                               placeholder="0"
+                               onChange={e => setHoursToBeat(e.target.value)}
+                               id="hoursToBeat" />
+                        </td>
+                        <td>
+                            <label htmlFor="releaseDate" className="required"></label>
+                            <input
+                              type="date"
+                              placeholder="dd-mm-yyyy"
+                              value={releaseDate}
+                              onChange={e => setReleaseDate(e.target.value)}
+                              id="releaseDate" />
+                        </td>
+                        <td>
+                            <button class="wait" onClick={addGame}>Add Game</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </article>
-            <form onSubmit={(e) => { e.preventDefault(); }}>
-                <fieldset>
-                    <legend>Which game are you adding?</legend>
-                    <label htmlFor="title" className="required">Game title</label>
-                    <input
-                        type="text"
-                        placeholder="Title of the game"
-                        value={title}
-                        onChange={e => setTitle(e.target.value)}
-                        id="title" />
-
-                    <label htmlFor="hoursToBeat" className="required">Hours to complete</label>
-                    <input
-                        type="number"
-                        value={hoursToBeat}
-                        placeholder="0"
-                        onChange={e => setHoursToBeat(e.target.value)}
-                        id="hoursToBeat" />
-
-                    <label htmlFor="releaseDate" className="required">Release date</label>
-                    <input
-                        type="date"
-                        placeholder="dd-mm-yyyy"
-                        value={releaseDate}
-                        onChange={e => setReleaseDate(e.target.value)}
-                        id="releaseDate" />
-
-                    <label htmlFor="submit">
-                        <button
-                            type="submit"
-                            onClick={addGame}
-                            id="submit"
-                        >Add game</button> to the collection</label>
-                </fieldset>
-            </form>
         </>
     )
 }
